@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Manager</title>
+</head>
+<body>
+
+    <style>
+        body{
+            font-family: sans-serif;
+            height: 98vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 45pt;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            margin-bottom: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 100px;
+            height: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        a:hover{
+            color: white;
+            background-color: black;
+        }
+
+        a:active{
+            transform: scale(0.95);
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .field{
+            width: 300px;
+            height: 30px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 15pt;
+        }
+
+        button{
+            background-color: white;
+            width: 200px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            color: white;
+            background-color: black;
+            border: 2px solid white;
+        }
+        button:active{
+            transform: scale(0.95);
+        }
+    </style>
+
+    <h1>Edit Link</h1>
+    <a href="/all">Your links</a>
+
+    <form action="/edit/<%=body.id%>" method="POST">
+        <input class="field" name="title" placeholder="Title" value="<%=body.title%>" autocomplete="off">
+        <input class="field" name="url" placeholder="URL" value="<%=body.url%>" autocomplete="off">
+        <input class="field" name="description" placeholder="Description" value="<%=body.description%>" autocomplete="off">
+        <button>Edit</button>
+    </form>
+
+    <%if(error){%>
+        <h3><%=error.message%></h3>
+    <%}%>
+</body>
+</html>
