@@ -6,8 +6,6 @@
     <img src="https://user-images.githubusercontent.com/98817641/177824343-61d2ae0b-bcf1-4efc-a92d-e119ed9f8a64.gif">
     <img src="https://user-images.githubusercontent.com/98817641/177824483-3fe0cb6e-fa80-4e78-ba9a-b3f6afdcd1ba.gif">
   </div>
-  <h3>Teste</h3>
-  <a href="https://diegoaugustodev.github.io/Link-Storage/">Link para testar aplicação</a>
 </div>
 
 <div>
